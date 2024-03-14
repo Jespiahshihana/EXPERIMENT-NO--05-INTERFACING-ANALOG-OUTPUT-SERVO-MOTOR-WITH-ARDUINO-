@@ -1,8 +1,8 @@
-###  DATE: 
+###  DATE: 14-03-2024
 
-###  NAME: 
-###  ROLL NO :
-###  DEPARTMENT: 
+###  NAME: JESPIAH SHIHANA P S
+###  ROLL NO : 212223040077
+###  DEPARTMENT: COMPUTER SCIENCE ENGINEERING
 
 
 # EXPERIMENT NO 05 INTERFACING ANALOG OUTPUT SERVO MOTOR WITH ARDUINO
@@ -74,11 +74,51 @@ CIRCUIT DIAGRAM
 
 
 ### PROGRAM :
+```
+#include<Servo.h>
+Servo myservo;
+
+  int pos=0;
+
+
+void setup()
+{
+  myservo.attach(9);
+  Serial.begin(9600);
+      Serial.print("type the angle");
+
+}
+
+void loop()
+{
+  for(pos=0;pos<=180;pos+=1)
+  {
+    myservo.write(pos);
+    delay(20);
+    //Serial.print("Angle=");
+    Serial.println(pos);
+  }
+  for(pos=180;pos>=0;pos-=1)
+  {
+    myservo.write(pos);
+    delay(20);
+    //Serial.print("Angle=");
+    Serial.println(pos);
+  }
+  
+}
+```
  
+### CIRCUIT DIAGRAM:
+![Exp 5 Intro to Robotics(a)](https://github.com/Jespiahshihana/EXPERIMENT-NO--05-INTERFACING-ANALOG-OUTPUT-SERVO-MOTOR-WITH-ARDUINO-/assets/144718286/fe846805-5d83-484a-b869-b70342381449)
+
+### SCHEMATIC VIEW:
+![Exp 5 Intro to Robotics(b)](https://github.com/Jespiahshihana/EXPERIMENT-NO--05-INTERFACING-ANALOG-OUTPUT-SERVO-MOTOR-WITH-ARDUINO-/assets/144718286/029dfb74-bcc2-4a14-add4-b06f07a494da)
 
 
 
-
+### GRAPH:
+![Exp 5 Graph Intro to Robotics](https://github.com/Jespiahshihana/EXPERIMENT-NO--05-INTERFACING-ANALOG-OUTPUT-SERVO-MOTOR-WITH-ARDUINO-/assets/144718286/fdd12c82-d2f6-44a1-8eb2-70732a570198)
 
 
 
